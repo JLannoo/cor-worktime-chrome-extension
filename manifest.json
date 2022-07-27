@@ -1,0 +1,24 @@
+{
+    "name": "COR Worktime Calculator",
+    "description": "Calculate worktime for COR",
+    "version": "1.0",
+    "manifest_version": 3,
+
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://aenima.cor.works/*"],
+            "js": ["./src/scripts/worktime.js"],
+            "css": ["./src/interface/styles/worktime.css"]
+        }
+    ],
+
+    "icons": {
+        "64": "./src/assets/icon.png"
+    }
+}

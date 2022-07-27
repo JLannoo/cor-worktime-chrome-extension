@@ -1,0 +1,30 @@
+#worktime{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container-info{
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group{
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="time"]{
+    outline: none;
+    
+}
+
+.main-header{
+    height: 75px !important;
+}
+
+.nav,
+.navbar,
+.navbar-custom-menu {
+    height: 100% !important;
+}

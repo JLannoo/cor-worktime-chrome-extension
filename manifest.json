@@ -12,7 +12,7 @@
 
     "content_scripts": [
         {
-            "matches": ["https://aenima.cor.works/*"],
+            "matches": ["https://*.cor.works/*"],
             "js": ["./src/scripts/worktime.js"],
             "css": ["./src/interface/styles/worktime.css"]
         }

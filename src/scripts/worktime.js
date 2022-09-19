@@ -117,9 +117,9 @@ function calculateWorktime(start, rest=false){
     const minutesNow = parseInt(timeNow[1], 10);
 
     const totalMinutesNow = hoursNow * 60 + minutesNow;
-    const totalMinutes = totalMinutesNow - totalMinutesStart;
+    const totalMinutes = totalMinutesNow - totalMinutesStart - (rest ? 60 : 0);
 
-    const hours = Math.floor(totalMinutes / 60) - (rest ? 1 : 0);
+    const hours = totalMinutes > 0 ? Math.floor(totalMinutes / 60) : Math.ceil(totalMinutes / 60);
     const minutes = totalMinutes % 60;
 
 
@@ -140,7 +140,7 @@ function getRegisteredTime(){
                     }
 
                     const totalMinutes = 8 * 60 * percentage / 100;
-                    const hours = Math.floor(totalMinutes / 60);
+                    const hours = totalMinutes > 0 ? Math.floor(totalMinutes / 60) : Math.ceil(totalMinutes / 60);
                     const minutes = parseInt(totalMinutes % 60);
 
                     resolve({hours , minutes});

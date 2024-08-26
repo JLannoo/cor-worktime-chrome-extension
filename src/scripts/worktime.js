@@ -43,7 +43,7 @@ input.onchange = (e) => {
 }
 
 const cachedTime = readFromCache();
-if(cachedTime){
+if(cachedTime.hours && cachedTime.minutes){
     input.value = [cachedTime.hours.padStart(2,"0") , cachedTime.minutes.padStart(2,"0")].join(":");
 }
 
@@ -112,7 +112,7 @@ function calculateWorktime(start, rest=false){
     
     const totalMinutesStart = hoursStart * 60 + minutesStart;
 
-    const timeNow = new Date().toLocaleTimeString().split(':');
+    const timeNow = new Date().toLocaleTimeString("es-AR", { hour12: false }).split(':');
     const hoursNow = parseInt(timeNow[0], 10);
     const minutesNow = parseInt(timeNow[1], 10);
 

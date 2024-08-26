@@ -28,3 +28,11 @@ input[type="time"]{
 .navbar-custom-menu {
     height: 100% !important;
 }
+
+#wrapper-site {
+    padding-top: 75px !important;
+}
+
+.style__MainContainerLayout-sc-8ypsp9-0.cnAtVH {
+    top: 75px !important;
+}
